@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Manicure V&amp;M — Nagelstudio in Leiden</title>
+<meta id="metaDesc" name="description" content="Manicure V&M — nagelstudio in het hart van Leiden. Manicure, pedicure, gellak, nagelverlenging en nail art met oog voor detail. Boek eenvoudig online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF4F0; --paper2:#F1E2DA; --ink:#2E1A22; --muted:#87716A; --line:#EBDCD2;
+  --rose:#B0566A; --rose2:#924253; --gold:#C29A5E; --card:#fff;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.68;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+@media(max-width:700px){.wrap{padding:0 22px}}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);font-weight:600}
+.sec-head{text-align:center;max-width:600px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(29px,4.4vw,44px);line-height:1.08;margin:12px 0 12px}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-size:14px;letter-spacing:.05em;font-weight:600;padding:14px 28px;border-radius:999px;background:var(--rose);color:#fff;border:1.5px solid var(--rose);cursor:pointer;position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,background .25s,border-color .25s,color .25s}
+.btn:hover{background:var(--rose2);border-color:var(--rose2);transform:translateY(-2px);box-shadow:0 12px 24px rgba(146,66,83,.28)}
+.btn:active{transform:translateY(0) scale(.95);box-shadow:0 4px 10px rgba(146,66,83,.22)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:#fff;border-color:var(--rose);color:var(--rose);box-shadow:0 12px 24px rgba(46,26,34,.1)}
+.btn.light{background:#fff;color:var(--rose);border-color:#fff}
+.btn.light:hover{box-shadow:0 12px 24px rgba(0,0,0,.2)}
+.btn.big{padding:16px 32px;font-size:14.5px}
+.btn .ripple{background:rgba(255,255,255,.55)}
+.btn.ghost .ripple{background:rgba(176,86,106,.18)}
+.btn.light .ripple{background:rgba(176,86,106,.18)}
+
+/* ripple (click feedback, used on all interactive controls) */
+.ripple{position:absolute;border-radius:50%;transform:scale(0);animation:rippleAnim .6s ease-out;pointer-events:none}
+@keyframes rippleAnim{to{transform:scale(1);opacity:0}}
+@media(prefers-reduced-motion:reduce){.ripple{display:none}}
+
+/* language toggle */
+.langtoggle{display:inline-flex;align-items:center;background:var(--paper2);border-radius:999px;padding:3px;gap:2px}
+.langtoggle button{border:none;background:none;cursor:pointer;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.03em;padding:6px 11px;border-radius:999px;color:var(--muted);position:relative;overflow:hidden;transition:transform .15s,color .2s,background .2s}
+.langtoggle button:hover{color:var(--rose);transform:translateY(-1px)}
+.langtoggle button:active{transform:scale(.92)}
+.langtoggle button.active{background:var(--rose);color:#fff}
+.langtoggle button.active:hover{color:#fff}
+.langtoggle button .ripple{background:rgba(176,86,106,.2)}
+.langtoggle button.active .ripple{background:rgba(255,255,255,.35)}
+.mnav .langtoggle{margin:6px 0 0}
+.mnav .langtoggle button{font-size:14px;padding:8px 16px}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(250,244,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s;padding:16px 0}
+header.scrolled{box-shadow:0 4px 18px rgba(46,26,34,.06);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:23px;font-weight:600}
+.brand .mk{width:37px;height:37px;border-radius:50%;background:linear-gradient(140deg,var(--rose),var(--gold));display:grid;place-items:center;color:#fff;font-size:13.5px;font-weight:600;font-family:var(--sans)}
+.navlinks{display:flex;gap:30px;font-size:14px;color:var(--ink);margin-left:auto}
+.navlinks a{opacity:.8;position:relative;padding-bottom:3px;transition:opacity .2s,color .2s}
+.navlinks a::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--rose);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.navlinks a:hover{opacity:1;color:var(--rose)}
+.navlinks a:hover::after,.navlinks a.active::after{transform:scaleX(1)}
+.navlinks a.active{opacity:1;color:var(--rose)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:14px;font-weight:600;white-space:nowrap;transition:color .2s,transform .2s}
+.nav-phone:hover{color:var(--rose);transform:translateY(-1px)}
+.nav-phone span{color:var(--rose)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;position:relative;overflow:hidden;border-radius:8px;transition:transform .15s}
+.burger .ripple{background:rgba(46,26,34,.15)}
+.burger:active{transform:scale(.9)}
+.burger span{width:22px;height:2px;background:var(--ink);display:block;border-radius:2px;transition:transform .3s ease,opacity .2s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:920px){.navlinks,.nav-phone{display:none}.burger{display:flex}}
+.mnav{position:fixed;inset:0;background:var(--paper);z-index:70;transform:translateY(-100%);transition:transform .4s ease;display:flex;flex-direction:column;justify-content:center;padding:40px;gap:6px}
+.mnav.open{transform:none}
+.mnav a{font-family:var(--serif);font-size:30px;padding:9px 0;border-bottom:1px solid var(--line);transition:color .2s,padding-left .2s}
+.mnav a:hover{color:var(--rose);padding-left:8px}
+.mnav .btn{margin-top:20px}
+.mnav .close{position:absolute;top:22px;right:26px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;background:none;border:none;cursor:pointer;transition:color .2s,transform .15s}
+.mnav .close:hover{color:var(--rose)}
+.mnav .close:active{transform:scale(.92)}
+
+/* hero */
+.hero{padding:64px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,62px);line-height:1.06;margin:16px 0 18px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero .lead{font-size:16.5px;color:var(--muted);max-width:440px;margin-bottom:26px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.rating-line{display:flex;align-items:center;gap:11px;margin-top:24px;flex-wrap:wrap}
+.rating-line .stars{color:var(--gold);letter-spacing:2px;font-size:16px}
+.rating-line .muted{color:var(--muted);font-size:13.5px}
+.hero-art{aspect-ratio:4/4.3;border-radius:22px;overflow:hidden;box-shadow:0 24px 54px rgba(46,26,34,.16)}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero-art{max-width:380px;margin:0 auto}}
+
+/* marquee */
+.marquee{overflow:hidden;background:var(--ink);padding:15px 0}
+.marquee-track{display:flex;width:max-content;animation:marqueeScroll 26s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-group{display:flex;flex-shrink:0}
+.marquee-item{display:inline-flex;align-items:center;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--paper);padding:0 24px;position:relative}
+.marquee-item::after{content:'✦';margin-left:24px;color:var(--gold);font-style:normal}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+@media(max-width:700px){.marquee-item{font-size:15px;padding:0 16px}.marquee-item::after{margin-left:16px}}
+
+section{padding:76px 0}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:38px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-i{text-align:center}
+.trust-i .ic{width:44px;height:44px;border-radius:50%;background:var(--paper2);display:grid;place-items:center;font-size:19px;margin:0 auto 10px}
+.trust-i b{display:block;font-size:14px;font-weight:600;margin-bottom:2px}
+.trust-i span{color:var(--muted);font-size:12.5px}
+@media(max-width:700px){.trust{grid-template-columns:1fr 1fr;gap:24px 14px}}
+
+/* services: simple treatment-menu list */
+.services{background:var(--paper2)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 44px}
+.menu-cat{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--rose);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.menu-cat.spaced{margin-top:30px}
+.menu-item{display:flex;align-items:center;gap:12px;width:100%;background:none;border:none;border-bottom:1px solid var(--line);padding:13px 6px;margin:0 -6px;border-radius:10px;cursor:pointer;text-align:left;font-family:inherit;position:relative;overflow:hidden;transition:background .2s,padding-left .2s,color .15s}
+.menu-item:last-child{border-bottom:none}
+.menu-item:hover{color:var(--rose);background:rgba(176,86,106,.06);padding-left:12px}
+.menu-item:active{background:rgba(176,86,106,.14)}
+.menu-item .ripple{background:rgba(176,86,106,.16)}
+.mi-ic{font-size:17px;width:24px;flex-shrink:0;display:inline-block;transition:transform .25s ease}
+.menu-item:hover .mi-ic{transform:scale(1.18) rotate(-6deg)}
+.mi-body{flex:1;min-width:0}
+.mi-body b{display:block;font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink)}
+.menu-item:hover .mi-body b{color:var(--rose)}
+.mi-body small{color:var(--muted);font-size:12.5px;display:block;margin-top:1px}
+.mi-go{color:var(--rose);font-size:14px;opacity:0;transform:translateX(-3px);transition:.15s;flex-shrink:0}
+.menu-item:hover .mi-go{opacity:1;transform:none}
+.svc-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:34px}
+@media(max-width:860px){.menu-grid{grid-template-columns:1fr;gap:0}.menu-cat.spaced{margin-top:26px}}
+
+/* gallery */
+.filters{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.filter{font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s}
+.filter:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-2px);box-shadow:0 8px 16px rgba(46,26,34,.1)}
+.filter:active{transform:scale(.93)}
+.filter .ripple{background:rgba(46,26,34,.14)}
+.filter.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.filter.active:hover{color:var(--paper)}
+.filter.active .ripple{background:rgba(255,255,255,.3)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gtile{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--paper2);transition:box-shadow .3s,transform .3s}
+.gtile:hover{box-shadow:0 16px 30px rgba(46,26,34,.18);transform:translateY(-3px)}
+.gtile img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gtile:hover img{transform:scale(1.08)}
+.gtile.hide{display:none}
+.gtile::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(46,26,34,.55) 0%,rgba(46,26,34,0) 45%)}
+.gtile .cap{position:absolute;left:14px;bottom:14px;z-index:2;color:#fff;font-size:15px;font-weight:600;letter-spacing:.02em;background:rgba(46,26,34,.55);backdrop-filter:blur(3px);padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.25)}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}}
+
+/* about */
+.about{background:var(--paper2)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.about-pic{aspect-ratio:4/5;border-radius:18px;overflow:hidden}
+.about-pic img{width:100%;height:100%;object-fit:cover}
+.about h2{font-size:clamp(27px,3.6vw,38px);line-height:1.08;margin:12px 0 14px}
+.about p{color:var(--muted);margin-bottom:12px;font-size:15.5px}
+.about .checklist{list-style:none;margin:16px 0 24px}
+.about .checklist li{padding:6px 0 6px 26px;position:relative;font-weight:500}
+.about .checklist li::before{content:'✓';position:absolute;left:0;color:var(--rose);font-weight:700}
+@media(max-width:840px){.about-grid{grid-template-columns:1fr;gap:30px}}
+
+/* reviews */
+.rev-wrap{max-width:660px;margin:0 auto}
+.rev-track{overflow:hidden}
+.rev-slides{display:flex;transition:transform .5s ease}
+.rev{min-width:100%;text-align:center;padding:6px 16px}
+.rev .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:16px}
+.rev p{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);font-style:italic;line-height:1.4;margin-bottom:16px}
+.rev .who{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rev-nav{display:flex;justify-content:center;gap:12px;margin-top:22px}
+.rev-arrow{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:16px;color:var(--rose);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s}
+.rev-arrow:hover{background:var(--rose);color:#fff;border-color:var(--rose);transform:translateY(-2px);box-shadow:0 8px 16px rgba(146,66,83,.25)}
+.rev-arrow:active{transform:scale(.9)}
+.rev-arrow .ripple{background:rgba(176,86,106,.2)}
+.rev-arrow:hover .ripple{background:rgba(255,255,255,.35)}
+.rev-note{text-align:center;color:var(--muted);font-size:12.5px;margin-top:18px}
+
+/* cta */
+.ctaband{background:var(--rose);color:#fff;text-align:center}
+.ctaband h2{font-size:clamp(27px,3.8vw,40px);line-height:1.08;margin-bottom:12px}
+.ctaband p{color:rgba(255,255,255,.9);font-size:16px;margin-bottom:24px;max-width:40ch;margin-left:auto;margin-right:auto}
+.ctaband .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:stretch}
+.contact-info h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+.contact-info>p{color:var(--muted);margin-bottom:20px}
+.cinfo{list-style:none;margin-bottom:22px}
+.cinfo li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.cinfo .ci{width:38px;height:38px;border-radius:10px;background:var(--paper2);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+.cinfo b{display:block;font-size:14.5px;font-weight:600}
+.cinfo span{color:var(--muted);font-size:13.5px}
+.hours{background:var(--paper2);border-radius:14px;padding:6px 18px}
+.hours .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.hours .row:last-child{border:none}.hours .closed{color:var(--rose2)}
+.map{border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+@media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:26px}.map{min-height:280px}.map iframe{min-height:280px}}
+
+/* sticky mobile bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+.mbar a{flex:1;text-align:center}.mbar .btn{width:100%;padding:12px}
+@media(max-width:920px){.mbar{display:flex}body{padding-bottom:68px}}
+
+footer{background:var(--ink);color:#c3b0b8;padding:48px 0 26px}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:26px}
+.foot-brand{font-family:var(--serif);font-size:27px;color:#fff;margin-bottom:10px}
+.foot-grid p{font-size:13.5px;max-width:28ch}
+.foot-col h5{color:#fff;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.foot-col a{display:block;color:#c3b0b8;font-size:14px;margin-bottom:8px;background:none;border:none;cursor:pointer;text-align:left;transition:color .2s,transform .2s}
+.foot-col a:hover{color:#fff;transform:translateX(3px)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-size:12px;text-align:center;color:#8f7b83}
+.foot-bottom a{color:#c3b0b8}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== BOOKING MODAL ===== */
+.bkoverlay{position:fixed;inset:0;background:rgba(46,26,34,.5);backdrop-filter:blur(3px);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+.bkoverlay.open{display:flex}
+.bkmodal{background:#fff;border-radius:20px;max-width:500px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 30px 70px rgba(46,26,34,.3);position:relative}
+.bkclose{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;font-size:15px;color:#fff;display:grid;place-items:center;z-index:3;overflow:hidden;transition:transform .15s,background .2s}
+.bkclose:hover{background:rgba(255,255,255,.4);transform:rotate(90deg)}
+.bkclose:active{transform:rotate(90deg) scale(.88)}
+.bkclose .ripple{background:rgba(255,255,255,.4)}
+.bktop{background:var(--rose);color:#fff;padding:26px 28px 20px;border-radius:20px 20px 0 0}
+.bktop h3{font-family:var(--serif);font-size:23px;margin-bottom:3px}
+.bktop p{font-size:13px;color:rgba(255,255,255,.85)}
+.bkprogress{display:flex;gap:6px;margin-top:16px}
+.bkprogress .seg{flex:1;height:4px;border-radius:99px;background:rgba(255,255,255,.3);overflow:hidden}
+.bkprogress .seg .fill{height:100%;width:0;background:#fff;transition:width .3s}
+.bkbody{padding:24px 28px 28px}
+.bkstep{display:none}
+.bkstep.active{display:block}
+.bkstep h4{font-family:var(--serif);font-size:20px;margin-bottom:4px}
+.bkstep .hint{color:var(--muted);font-size:13px;margin-bottom:16px}
+.bksvc-list{display:flex;flex-direction:column;gap:8px;max-height:340px;overflow-y:auto;padding-right:2px}
+.bksvc{display:flex;justify-content:space-between;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px 15px;cursor:pointer;font-size:14px;font-weight:500;position:relative;overflow:hidden;transition:transform .15s,box-shadow .2s,border-color .2s,background .2s}
+.bksvc:hover{border-color:var(--rose);background:var(--paper2);transform:translateY(-2px);box-shadow:0 8px 16px rgba(46,26,34,.08)}
+.bksvc:active{transform:scale(.98)}
+.bksvc.sel{border-color:var(--rose);background:var(--paper2);box-shadow:0 0 0 3px rgba(176,86,106,.14)}
+.bksvc .ripple{background:rgba(176,86,106,.16)}
+.bksvc small{color:var(--muted);font-weight:400}
+.bkcal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.bkcal-head button{background:var(--paper2);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;position:relative;overflow:hidden;transition:transform .15s,background .2s}
+.bkcal-head button:hover:not(:disabled){background:var(--rose);color:#fff;transform:scale(1.08)}
+.bkcal-head button:active:not(:disabled){transform:scale(.9)}
+.bkcal-head button:disabled{opacity:.3;cursor:not-allowed}
+.bkcal-head span{font-weight:600;font-family:var(--serif);font-size:18px}
+.bkcal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.bkcal-grid .dow{font-size:10.5px;color:var(--muted);font-weight:600;padding-bottom:4px}
+.bkcal-day{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;font-size:13px;cursor:pointer;border:1.5px solid transparent;position:relative;overflow:hidden;transition:transform .15s,background .15s,border-color .15s,color .15s}
+.bkcal-day.disabled{color:#e3d3d8;cursor:not-allowed}
+.bkcal-day.avail:hover{background:var(--paper2);border-color:var(--rose);transform:scale(1.08)}
+.bkcal-day.avail:active{transform:scale(.94)}
+.bkcal-day.sel{background:var(--rose);color:#fff}
+.bkcal-day.empty{visibility:hidden}
+.bkcal-day .ripple{background:rgba(176,86,106,.22)}
+.bkslots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:260px;overflow-y:auto}
+.bkslot{border:1.5px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;background:#fff;position:relative;overflow:hidden;transition:transform .15s,box-shadow .2s,border-color .15s,background .15s,color .15s}
+.bkslot:hover{border-color:var(--rose);background:var(--paper2);transform:translateY(-2px);box-shadow:0 6px 14px rgba(46,26,34,.08)}
+.bkslot:active{transform:scale(.95)}
+.bkslot.sel{background:var(--rose);border-color:var(--rose);color:#fff}
+.bkslot .ripple{background:rgba(176,86,106,.2)}
+.bkslot.sel .ripple{background:rgba(255,255,255,.35)}
+.bkslot.taken{opacity:.35;text-decoration:line-through;cursor:not-allowed;background:none}
+.bkempty{color:var(--muted);font-size:13.5px;text-align:center;padding:18px 0}
+.bkfield{margin-bottom:13px}
+.bkfield label{display:block;font-size:12px;font-weight:600;margin-bottom:5px}
+.bkfield input,.bkfield textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;transition:border-color .2s,box-shadow .2s}
+.bkfield input:focus,.bkfield textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(176,86,106,.14)}
+.bkfield.err input{border-color:#c0392b}
+.bksummary{background:var(--paper2);border-radius:12px;padding:13px 15px;margin-bottom:14px;font-size:13.5px}
+.bksummary .row{display:flex;justify-content:space-between;padding:4px 0}
+.bksummary .row span:first-child{color:var(--muted)}
+.bkactions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.bkback{background:none;border:none;color:var(--muted);font-weight:600;cursor:pointer;font-size:13px;font-family:inherit;transition:color .2s,transform .15s}
+.bkback:hover{color:var(--rose);transform:translateX(-2px)}
+.bkback:active{transform:translateX(-2px) scale(.94)}
+.bkback.hide{visibility:hidden}
+.bkdone{text-align:center;padding:8px 0}
+.bkdone .tick{width:58px;height:58px;border-radius:50%;background:var(--paper2);display:grid;place-items:center;margin:0 auto 14px;font-size:26px;color:var(--rose)}
+.bkerr{color:#c0392b;font-size:12.5px;text-align:center;margin-top:10px;display:none}
+.bkerr.show{display:block}
+.bkloading{text-align:center;padding:26px 0;color:var(--muted);font-size:13.5px}
+.bkdemo{background:#fff4e8;color:#8a5a1f;font-size:11px;text-align:center;padding:6px 10px;border-radius:8px;margin-bottom:14px}
+</style>
+</head>
+<body id="top">
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mk">V&amp;M</span>Manicure V&amp;M</a>
+    <nav class="navlinks">
+      <a href="#behandelingen" data-i18n="nav_treatments">Behandelingen</a>
+      <a href="#galerij" data-i18n="nav_gallery">Galerij</a>
+      <a href="#over" data-i18n="nav_about">Over ons</a>
+      <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="langtoggle" id="langToggle">
+        <button type="button" data-lang="nl">NL</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a class="nav-phone" href="tel:+31616931311"><span>📞</span> 06 16 93 13 11</a>
+      <a href="#" class="btn js-book" data-i18n="nav_book">Online boeken</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <button class="close" id="mclose" data-i18n="mnav_close">Sluiten ✕</button>
+  <a href="#behandelingen" data-i18n="nav_treatments">Behandelingen</a>
+  <a href="#galerij" data-i18n="nav_gallery">Galerij</a>
+  <a href="#over" data-i18n="nav_about">Over ons</a>
+  <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <a href="#" class="btn big js-book" data-i18n="nav_book">Online boeken</a>
+  <div class="langtoggle" id="langToggleMobile">
+    <button type="button" data-lang="nl">Nederlands</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eyebrow">Nagelstudio · Leiden</span>
+      <h1 data-i18n="hero_h1">Verzorgde nagels,<br>met oog voor <em>detail</em>.</h1>
+      <p class="lead" data-i18n="hero_lead">Bij Manicure V&amp;M draait alles om mooie, gezonde nagels in een ontspannen sfeer. Manicure, pedicure, gellak en nagelverlenging — vakkundig en met zorg.</p>
+      <div class="btns">
+        <a href="#" class="btn big js-book" data-i18n="nav_book">Online boeken</a>
+        <a href="tel:+31616931311" class="btn ghost big" data-i18n="hero_call">📞 Bel ons</a>
+      </div>
+      <div class="rating-line">
+        <div class="stars">★★★★★</div>
+        <div class="muted" data-i18n="hero_rating">Geliefd bij klanten in Leiden e.o.</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80" alt="Manicure bij Manicure V&M" data-i18n-alt="alt_hero" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- TRUST -->
+<div class="wrap"><div class="trust">
+  <div class="trust-i reveal"><div class="ic">💎</div><b data-i18n="trust1_b">Vakwerk &amp; detail</b><span data-i18n="trust1_span">Netjes afgewerkt</span></div>
+  <div class="trust-i reveal"><div class="ic">🧼</div><b data-i18n="trust2_b">Hygiënisch</b><span data-i18n="trust2_span">Steriel &amp; verzorgd</span></div>
+  <div class="trust-i reveal"><div class="ic">🌸</div><b data-i18n="trust3_b">Ontspannen sfeer</b><span data-i18n="trust3_span">Even bijkomen</span></div>
+  <div class="trust-i reveal"><div class="ic">📅</div><b data-i18n="trust4_b">Online boeken</b><span data-i18n="trust4_span">Live beschikbaarheid</span></div>
+</div></div>
+
+<!-- SERVICES -->
+<section class="services" id="behandelingen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="nav_treatments">Behandelingen</span>
+      <h2 data-i18n="svc_h2">De kaart</h2>
+      <p data-i18n="svc_p">Kies je behandeling — je ziet direct de actuele beschikbaarheid.</p>
+    </div>
+    <div class="menu-grid reveal">
+      <div>
+        <h3 class="menu-cat" data-i18n="cat_classic">Klassiek</h3>
+        <button class="menu-item js-book"><span class="mi-ic">💅</span><span class="mi-body"><b data-i18n="svc_manicure_n">Manicure</b><small data-i18n="svc_manicure_d">Verzorgde nagels, netjes gevijld en gepolijst.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">🦶</span><span class="mi-body"><b data-i18n="svc_pedicure_n">Pedicure</b><small data-i18n="svc_pedicure_d">Verzorgde voeten en teennagels.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">💞</span><span class="mi-body"><b data-i18n="svc_manipedi_n">Manicure &amp; pedicure</b><small data-i18n="svc_manipedi_d">Handen én voeten in één bezoek.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">🤍</span><span class="mi-body"><b data-i18n="svc_polish_n">Nagellak</b><small data-i18n="svc_polish_d">Klassiek lakken in jouw kleur.</small></span><span class="mi-go">→</span></button>
+      </div>
+      <div>
+        <h3 class="menu-cat" data-i18n="cat_gel">Gellak &amp; gel</h3>
+        <button class="menu-item js-book"><span class="mi-ic">💖</span><span class="mi-body"><b data-i18n="svc_gellak_n">Gellak</b><small data-i18n="svc_gellak_d">Langhoudende kleur met glans.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">💫</span><span class="mi-body"><b data-i18n="svc_gelext_n">Gelnagels &amp; verlenging</b><small data-i18n="svc_gelext_d">Stevig en natuurlijk ogend.</small></span><span class="mi-go">→</span></button>
+        <h3 class="menu-cat spaced" data-i18n="cat_ext">Verlenging &amp; nail art</h3>
+        <button class="menu-item js-book"><span class="mi-ic">🪞</span><span class="mi-body"><b data-i18n="svc_acryl_n">Acrylnagels</b><small data-i18n="svc_acryl_d">Sterke verlenging, extra stevig.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">🎨</span><span class="mi-body"><b data-i18n="svc_nailart_n">Nail art</b><small data-i18n="svc_nailart_d">Van subtiel tot een volledige set.</small></span><span class="mi-go">→</span></button>
+      </div>
+      <div>
+        <h3 class="menu-cat" data-i18n="cat_russian">Russische techniek</h3>
+        <button class="menu-item js-book"><span class="mi-ic">✨</span><span class="mi-body"><b data-i18n="svc_rus_n">Russische manicure</b><small data-i18n="svc_rus_d">Precieze droge techniek.</small></span><span class="mi-go">→</span></button>
+        <h3 class="menu-cat spaced" data-i18n="cat_men">Voor heren</h3>
+        <button class="menu-item js-book"><span class="mi-ic">🧔</span><span class="mi-body"><b data-i18n="svc_heren_mani_n">Manicure voor heren</b><small data-i18n="svc_heren_mani_d">Verzorgde handen en nagels.</small></span><span class="mi-go">→</span></button>
+        <button class="menu-item js-book"><span class="mi-ic">👞</span><span class="mi-body"><b data-i18n="svc_heren_pedi_n">Pedicure voor heren</b><small data-i18n="svc_heren_pedi_d">Frisse, verzorgde voeten.</small></span><span class="mi-go">→</span></button>
+      </div>
+    </div>
+    <p class="svc-note" data-i18n="svc_note">Combinatie of iets bijzonders in gedachten? Kies de dichtstbijzijnde behandeling en laat het weten bij "opmerking".</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galerij">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="gal_eyebrow">Ons werk</span>
+      <h2 data-i18n="gal_h2">Een indruk van onze nagels</h2>
+      <p data-i18n="gal_p">Filter op behandeling en ontdek wat we voor je kunnen doen.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="filter active" data-f="all" data-i18n="filter_all">Alles</button>
+      <button class="filter" data-f="gellak" data-i18n="filter_gellak">Gellak</button>
+      <button class="filter" data-f="nailart" data-i18n="filter_nailart">Nail art</button>
+    </div>
+    <div class="gal reveal" id="gal">
+      <div class="gtile" data-cat="gellak"><img src="img/gallery-owner-nude-almond.jpg" alt="Gellak nude amandel manicure" data-i18n-alt="gal_cap1" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap1">Gellak – nude amandel</span></div>
+      <div class="gtile" data-cat="nailart"><img src="img/gallery-customer-chrome.jpg" alt="Nail art chrome roze" data-i18n-alt="gal_cap2" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap2">Nail art – chrome roze</span></div>
+      <div class="gtile" data-cat="gellak"><img src="img/gallery-owner-black-grey.jpg" alt="Gellak zwart en grijs" data-i18n-alt="gal_cap3" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap3">Gellak – zwart & grijs</span></div>
+      <div class="gtile" data-cat="nailart"><img src="img/gallery-customer-ombre.jpg" alt="Nail art zilveren ombré" data-i18n-alt="gal_cap4" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap4">Nail art – zilveren ombré</span></div>
+      <div class="gtile" data-cat="nailart"><img src="img/gallery-owner-blue-glitter.jpg" alt="Nail art blauwe glitter" data-i18n-alt="gal_cap5" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap5">Nail art – blauwe glitter</span></div>
+      <div class="gtile" data-cat="nailart"><img src="img/gallery-customer-glitter.jpg" alt="Nail art glitter en steentjes" data-i18n-alt="gal_cap6" onerror="this.style.display='none'"><span class="cap" data-i18n="gal_cap6">Nail art – glitter & steentjes</span></div>
+    </div>
+    <p class="svc-note" data-i18n="gal_note">Echte foto's van onze klanten en salon.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="over">
+  <div class="wrap about-grid">
+    <div class="about-pic reveal"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80" alt="Manicure V&M studio" data-i18n-alt="alt_about" onerror="this.style.display='none'"></div>
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="about_eyebrow">Over ons</span>
+      <h2>Manicure V&amp;M</h2>
+      <p data-i18n="about_p1">Manicure V&amp;M is een nagelstudio in het hart van Leiden, gevestigd in salon World of Beauty. Viktoria en Marina zorgen met vakmanschap en aandacht voor mooie, gezonde nagels.</p>
+      <p data-i18n="about_p2">Kwaliteit, hygiëne en een gastvrije sfeer staan bij ons voorop — of je nu komt voor een snelle gellak of een complete nagelverlenging.</p>
+      <ul class="checklist">
+        <li data-i18n="about_li1">Ervaren specialisten Viktoria &amp; Marina</li>
+        <li data-i18n="about_li2">Manicure, pedicure, gellak &amp; verlenging</li>
+        <li data-i18n="about_li3">Eenvoudig online boeken, wanneer het jou uitkomt</li>
+      </ul>
+      <a href="#" class="btn js-book" data-i18n="about_cta">Plan je afspraak</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="rev_eyebrow">Wat klanten zeggen</span>
+      <h2 data-i18n="rev_h2">Blije handen &amp; voeten</h2>
+    </div>
+    <div class="rev-wrap reveal">
+      <div class="rev-track"><div class="rev-slides" id="revSlides">
+        <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev1">"Het is altijd een genot om naar Maryna te gaan. Ze maakt niet alleen mooie nagels, ze heeft ook een geweldige persoonlijkheid en zorgt dat klanten zich op hun gemak en blij voelen."</p><div class="who" data-i18n="rev1_who">— Sarah de Rijcke (vertaald)</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev2">"Mijn voeten en handnagels zien er weer prachtig en verzorgd uit!! Maryna werkt heel zorgvuldig en is superlief! Heerlijke verwennerij."</p><div class="who" data-i18n="rev2_who">— Pascale Steegh</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev3">"Zonder twijfel 5 sterren. 10 sterren zijn helaas niet mogelijk, maar zouden zeker verdiend zijn. Perfecte manicure en gellak in een lieve, schone salon door echte professionals. Absolute aanrader!"</p><div class="who" data-i18n="rev3_who">— E. H. (vertaald)</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev4">"De beste manicure die ik ooit heb gehad! Fijne, professionele dames en een gezellige, ontspannen sfeer. Voor wie ontspanning wil combineren met een schoonheidsbehandeling. Echte aanrader."</p><div class="who" data-i18n="rev4_who">— Troy van Beek (vertaald)</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev5">"Prachtige ontwerpen, een ontspannen sfeer en meer dan lief personeel. Kan het niet genoeg aanraden!"</p><div class="who" data-i18n="rev5_who">— Karolina Dąbrowska (vertaald)</div></div>
+      </div></div>
+      <div class="rev-nav">
+        <button class="rev-arrow" id="revPrev" aria-label="Vorige" data-i18n-aria="rev_prev">‹</button>
+        <button class="rev-arrow" id="revNext" aria-label="Volgende" data-i18n-aria="rev_next">›</button>
+      </div>
+      <p class="rev-note"><span data-i18n="rev_note">✻ Echte reviews van klanten, overgenomen van Google.</span> <a href="https://share.google/aHUXN38hfv47ymyNF" target="_blank" rel="noopener" style="color:var(--rose);font-weight:600" data-i18n="rev_see_all">Bekijk alle reviews op Google →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2 data-i18n="cta_h2">Klaar voor mooie nagels?</h2>
+    <p data-i18n="cta_p">Boek eenvoudig online een afspraak bij Manicure V&amp;M — kies zelf je behandeling en tijd.</p>
+    <div class="btns">
+      <a href="#" class="btn light big js-book" data-i18n="nav_book">Online boeken</a>
+      <a href="tel:+31616931311" class="btn big" style="background:transparent;border-color:rgba(255,255,255,.6);color:#fff">📞 06 16 93 13 11</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="about" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow" data-i18n="contact_eyebrow">Contact &amp; route</span>
+      <h2 data-i18n="contact_h2">Kom langs in Leiden</h2>
+      <p data-i18n="contact_p">Je vindt ons in salon World of Beauty. Boek online of bel ons gerust.</p>
+      <ul class="cinfo">
+        <li><span class="ci">📍</span><div><b data-i18n="info_address_label">Adres</b><span>World of Beauty · Volmolengracht 46, 2312 PH Leiden</span></div></li>
+        <li><span class="ci">📞</span><div><b data-i18n="info_phone_label">Telefoon</b><span><a href="tel:+31616931311" style="color:var(--rose);font-weight:600">06 16 93 13 11</a></span></div></li>
+        <li><span class="ci">📅</span><div><b data-i18n="info_appt_label">Afspraak</b><span><a href="#" class="js-book" style="color:var(--rose);font-weight:600" data-i18n="info_appt_val">Boek direct online</a></span></div></li>
+      </ul>
+      <div class="hours">
+        <div class="row"><span data-i18n="day_mon">Maandag</span><span>09:30 – 18:00</span></div>
+        <div class="row"><span data-i18n="day_tue">Dinsdag</span><span>09:30 – 18:00</span></div>
+        <div class="row"><span data-i18n="day_wed">Woensdag</span><span>09:30 – 18:00</span></div>
+        <div class="row"><span data-i18n="day_thu">Donderdag</span><span class="closed" data-i18n="hours_closed">Gesloten</span></div>
+        <div class="row"><span data-i18n="day_fri">Vrijdag</span><span>09:30 – 18:00</span></div>
+        <div class="row"><span data-i18n="day_sat">Zaterdag</span><span>10:00 – 15:00</span></div>
+        <div class="row"><span data-i18n="day_sun">Zondag</span><span class="closed" data-i18n="hours_closed">Gesloten</span></div>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Kaart Manicure V&M" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Volmolengracht+46,+2312+PH+Leiden&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Manicure V&amp;M</div>
+        <p data-i18n="footer_tagline">Nagelstudio in het hart van Leiden — manicure, pedicure, gellak &amp; nagelverlenging.</p>
+      </div>
+      <div class="foot-col">
+        <h5 data-i18n="footer_menu_h5">Menu</h5>
+        <a href="#behandelingen" data-i18n="nav_treatments">Behandelingen</a><a href="#galerij" data-i18n="nav_gallery">Galerij</a><a href="#over" data-i18n="nav_about">Over ons</a><a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+      </div>
+      <div class="foot-col">
+        <h5 data-i18n="footer_contact_h5">Contact</h5>
+        <a href="#contact">Volmolengracht 46, Leiden</a><a href="tel:+31616931311">06 16 93 13 11</a><a href="#" class="js-book" data-i18n="nav_book">Online boeken</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Manicure V&amp;M · Leiden · <span data-i18n="footer_made">Website door</span> <a href="#top">TwoTabs</a></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+31616931311" class="btn ghost" data-i18n="mbar_call">📞 Bellen</a>
+  <a href="#" class="btn js-book" data-i18n="nav_book">Online boeken</a>
+</div>
+
+<!-- ===== BOOKING MODAL ===== -->
+<div class="bkoverlay" id="bkOverlay">
+  <div class="bkmodal">
+    <div class="bktop">
+      <button class="bkclose" id="bkClose" aria-label="Sluiten" data-i18n-aria="bk_close">✕</button>
+      <h3 data-i18n="bk_title">Boek je afspraak</h3>
+      <p data-i18n="bk_sub">Kies je behandeling, datum en tijd</p>
+      <div class="bkprogress" id="bkProgress">
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+      </div>
+    </div>
+    <div class="bkbody">
+      <div class="bkdemo" id="bkDemoNote" data-i18n="bk_demo">Demo-modus — deze boeking wordt lokaal in je browser bewaard, nog niet in een echte agenda.</div>
+
+      <div class="bkstep active" data-step="0">
+        <h4 data-i18n="bk_step0_h">Kies je behandeling</h4>
+        <p class="hint" data-i18n="bk_step0_hint">Selecteer de gewenste behandeling.</p>
+        <div class="bksvc-list" id="bkServices"></div>
+      </div>
+
+      <div class="bkstep" data-step="1">
+        <h4 data-i18n="bk_step1_h">Kies een datum</h4>
+        <p class="hint" data-i18n="bk_step1_hint">Beschikbare dagen zijn actief.</p>
+        <div class="bkcal" id="bkCal"></div>
+      </div>
+
+      <div class="bkstep" data-step="2">
+        <h4 data-i18n="bk_step2_h">Kies een tijd</h4>
+        <p class="hint" data-i18n="bk_step2_hint">Beschikbare tijden voor de gekozen dag.</p>
+        <div id="bkSlotsWrap"><div class="bkloading" data-i18n="bk_loading">Beschikbaarheid laden…</div></div>
+      </div>
+
+      <div class="bkstep" data-step="3">
+        <h4 data-i18n="bk_step3_h">Jouw gegevens</h4>
+        <p class="hint" data-i18n="bk_step3_hint">Bijna klaar — vul je gegevens in.</p>
+        <div class="bkfield" id="bkFName"><label data-i18n="bk_label_name">Naam</label><input type="text" id="bkName" placeholder="Voor- en achternaam" data-i18n-placeholder="bk_placeholder_name"><div style="color:#c0392b;font-size:12px;margin-top:4px" data-i18n="bk_err_name">Vul je naam in.</div></div>
+        <div class="bkfield" id="bkFPhone"><label data-i18n="bk_label_phone">Telefoonnummer</label><input type="tel" id="bkPhone" placeholder="06 12 34 56 78" data-i18n-placeholder="bk_placeholder_phone"><div style="color:#c0392b;font-size:12px;margin-top:4px" data-i18n="bk_err_phone">Vul een geldig telefoonnummer in.</div></div>
+        <div class="bkfield"><label data-i18n="bk_label_email">E-mail <span style="color:var(--muted);font-weight:400" data-i18n="bk_optional">(optioneel)</span></label><input type="email" id="bkEmail" placeholder="jij@email.nl"></div>
+        <div class="bkfield"><label data-i18n="bk_label_notes">Opmerking <span style="color:var(--muted);font-weight:400" data-i18n="bk_optional">(optioneel)</span></label><textarea id="bkNotes" rows="2" placeholder="Bijv. kleurwens of allergie" data-i18n-placeholder="bk_placeholder_notes"></textarea></div>
+        <div class="bksummary" id="bkSummary"></div>
+        <div class="bkerr" id="bkErr"></div>
+      </div>
+
+      <div class="bkstep" data-step="4">
+        <div class="bkdone">
+          <div class="tick">✓</div>
+          <h4 style="font-size:21px" data-i18n="bk_done_h">Afspraak bevestigd!</h4>
+          <p style="color:var(--muted);margin:8px 0 16px" data-i18n="bk_done_p">Tot snel bij Manicure V&amp;M!</p>
+          <div class="bksummary" id="bkDoneSummary" style="text-align:left"></div>
+          <a href="#" id="bkIcsLink" download="afspraak-manicure-vm.ics" class="btn ghost" style="margin-top:14px;width:100%" data-i18n="bk_ics">📅 Toevoegen aan agenda</a>
+        </div>
+      </div>
+
+      <div class="bkactions" id="bkActions">
+        <button class="bkback hide" id="bkBack" data-i18n="bk_back">‹ Terug</button>
+        <button class="btn" id="bkNext" style="display:none" data-i18n="bk_confirm">Afspraak bevestigen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* =========================================================================
+     BOOKING SYSTEM CONFIG
+     -------------------------------------------------------------------------
+     This site's booking calendar works right now in DEMO MODE (bookings are
+     stored locally in the visitor's browser, so you can click through the
+     whole flow immediately).
+
+     To connect it to a REAL, always-in-sync calendar (e.g. the studio's
+     Google Calendar), set CALENDAR_API_URL below to the URL of a small
+     serverless proxy (see the accompanying setup guide). Once that URL is
+     set, this file automatically switches from demo mode to live mode —
+     no other changes needed.
+  ========================================================================= */
+  var CALENDAR_API_URL = ""; // e.g. "https://your-worker.yoursubdomain.workers.dev"
+  var LIVE = CALENDAR_API_URL.trim().length > 0;
+
+  var SERVICES = [
+    {id:"manicure",    name:{nl:"Manicure",                    en:"Manicure"},                dur:45, icon:"💅"},
+    {id:"rus_manicure",name:{nl:"Russische manicure",          en:"Russian manicure"},         dur:60, icon:"✨"},
+    {id:"gellak",      name:{nl:"Gellak",                      en:"Gel polish"},               dur:45, icon:"💖"},
+    {id:"gel_ext",     name:{nl:"Gelnagels & verlenging",      en:"Gel nails & extensions"},   dur:90, icon:"💫"},
+    {id:"acryl",       name:{nl:"Acrylnagels",                 en:"Acrylic nails"},            dur:90, icon:"🪞"},
+    {id:"nailart",     name:{nl:"Nail art",                    en:"Nail art"},                 dur:45, icon:"🎨"},
+    {id:"pedicure",    name:{nl:"Pedicure",                    en:"Pedicure"},                 dur:45, icon:"🦶"},
+    {id:"mani_pedi",   name:{nl:"Manicure & pedicure",         en:"Manicure & pedicure"},      dur:90, icon:"💞"},
+    {id:"lak",         name:{nl:"Nagellak",                    en:"Regular polish"},           dur:20, icon:"🤍"},
+    {id:"heren_mani",  name:{nl:"Manicure voor heren",         en:"Manicure for men"},         dur:45, icon:"🧔"},
+    {id:"heren_pedi",  name:{nl:"Pedicure voor heren",         en:"Pedicure for men"},         dur:45, icon:"👞"}
+  ];
+
+  // Opening hours: 0=zondag ... 6=zaterdag (matches JS Date.getDay())
+  var HOURS = {0:null, 1:["09:30","18:00"], 2:["09:30","18:00"], 3:["09:30","18:00"],
+               4:null, 5:["09:30","18:00"], 6:["10:00","15:00"]};
+
+  /* ================= TRANSLATIONS / LANGUAGE SWITCH ================= */
+  var TRANSLATIONS = {
+    nl: {
+      pageTitle: "Manicure V&M — Nagelstudio in Leiden",
+      metaDesc: "Manicure V&M — nagelstudio in het hart van Leiden. Manicure, pedicure, gellak, nagelverlenging en nail art met oog voor detail. Boek eenvoudig online.",
+      nav_treatments:"Behandelingen", nav_gallery:"Galerij", nav_about:"Over ons", nav_reviews:"Reviews", nav_contact:"Contact", nav_book:"Online boeken",
+      mnav_close:"Sluiten ✕",
+      hero_eyebrow:"Nagelstudio · Leiden",
+      hero_h1:"Verzorgde nagels,<br>met oog voor <em>detail</em>.",
+      hero_lead:"Bij Manicure V&M draait alles om mooie, gezonde nagels in een ontspannen sfeer. Manicure, pedicure, gellak en nagelverlenging — vakkundig en met zorg.",
+      hero_call:"📞 Bel ons",
+      hero_rating:"<b>Geliefd</b> bij klanten in Leiden e.o.",
+      alt_hero:"Manicure bij Manicure V&M", alt_about:"Manicure V&M studio",
+      trust1_b:"Vakwerk &amp; detail", trust1_span:"Netjes afgewerkt",
+      trust2_b:"Hygiënisch", trust2_span:"Steriel &amp; verzorgd",
+      trust3_b:"Ontspannen sfeer", trust3_span:"Even bijkomen",
+      trust4_b:"Online boeken", trust4_span:"Live beschikbaarheid",
+      svc_h2:"De kaart", svc_p:"Kies je behandeling — je ziet direct de actuele beschikbaarheid.",
+      cat_classic:"Klassiek", cat_gel:"Gellak &amp; gel", cat_ext:"Verlenging &amp; nail art", cat_russian:"Russische techniek", cat_men:"Voor heren",
+      svc_manicure_n:"Manicure", svc_manicure_d:"Verzorgde nagels, netjes gevijld en gepolijst.",
+      svc_pedicure_n:"Pedicure", svc_pedicure_d:"Verzorgde voeten en teennagels.",
+      svc_manipedi_n:"Manicure &amp; pedicure", svc_manipedi_d:"Handen én voeten in één bezoek.",
+      svc_polish_n:"Nagellak", svc_polish_d:"Klassiek lakken in jouw kleur.",
+      svc_gellak_n:"Gellak", svc_gellak_d:"Langhoudende kleur met glans.",
+      svc_gelext_n:"Gelnagels &amp; verlenging", svc_gelext_d:"Stevig en natuurlijk ogend.",
+      svc_acryl_n:"Acrylnagels", svc_acryl_d:"Sterke verlenging, extra stevig.",
+      svc_nailart_n:"Nail art", svc_nailart_d:"Van subtiel tot een volledige set.",
+      svc_rus_n:"Russische manicure", svc_rus_d:"Precieze droge techniek.",
+      svc_heren_mani_n:"Manicure voor heren", svc_heren_mani_d:"Verzorgde handen en nagels.",
+      svc_heren_pedi_n:"Pedicure voor heren", svc_heren_pedi_d:"Frisse, verzorgde voeten.",
+      svc_note:'Combinatie of iets bijzonders in gedachten? Kies de dichtstbijzijnde behandeling en laat het weten bij "opmerking".',
+      gal_eyebrow:"Ons werk", gal_h2:"Een indruk van onze nagels", gal_p:"Echte foto's van onze salon en klanten — filter op stijl.",
+      filter_all:"Alles", filter_manicure:"Manicure", filter_gellak:"Gellak", filter_verlenging:"Verlenging", filter_nailart:"Nail art", filter_pedicure:"Pedicure",
+      gal_cap1:"Gellak – nude amandel", gal_cap2:"Nail art – chrome roze", gal_cap3:"Gellak – zwart & grijs", gal_cap4:"Nail art – zilveren ombré", gal_cap5:"Nail art – blauwe glitter", gal_cap6:"Nail art – glitter & steentjes",
+      gal_note:"Echte foto's van onze klanten en salon, gedeeld via onze Google-pagina.",
+      about_eyebrow:"Over ons",
+      about_p1:"Manicure V&M is een nagelstudio in het hart van Leiden, gevestigd in salon World of Beauty. Viktoria en Marina zorgen met vakmanschap en aandacht voor mooie, gezonde nagels.",
+      about_p2:"Kwaliteit, hygiëne en een gastvrije sfeer staan bij ons voorop — of je nu komt voor een snelle gellak of een complete nagelverlenging.",
+      about_li1:"Ervaren specialisten Viktoria &amp; Marina", about_li2:"Manicure, pedicure, gellak &amp; verlenging", about_li3:"Eenvoudig online boeken, wanneer het jou uitkomt",
+      about_cta:"Plan je afspraak",
+      rev_eyebrow:"Wat klanten zeggen", rev_h2:"Blije handen &amp; voeten",
+      rev1:'"Het is altijd een genot om naar Maryna te gaan. Ze maakt niet alleen mooie nagels, ze heeft ook een geweldige persoonlijkheid en zorgt dat klanten zich op hun gemak en blij voelen."',
+      rev1_who:"— Sarah de Rijcke (vertaald)",
+      rev2:'"Mijn voeten en handnagels zien er weer prachtig en verzorgd uit!! Maryna werkt heel zorgvuldig en is superlief! Heerlijke verwennerij."',
+      rev2_who:"— Pascale Steegh",
+      rev3:'"Zonder twijfel 5 sterren. 10 sterren zijn helaas niet mogelijk, maar zouden zeker verdiend zijn. Perfecte manicure en gellak in een lieve, schone salon door echte professionals. Absolute aanrader!"',
+      rev3_who:"— E. H. (vertaald)",
+      rev4:'"De beste manicure die ik ooit heb gehad! Fijne, professionele dames en een gezellige, ontspannen sfeer. Voor wie ontspanning wil combineren met een schoonheidsbehandeling. Echte aanrader."',
+      rev4_who:"— Troy van Beek (vertaald)",
+      rev5:'"Prachtige ontwerpen, een ontspannen sfeer en meer dan lief personeel. Kan het niet genoeg aanraden!"',
+      rev5_who:"— Karolina Dąbrowska (vertaald)",
+      rev_prev:"Vorige", rev_next:"Volgende",
+      rev_note:"✻ Echte reviews van klanten, overgenomen van Google.",
+      rev_see_all:"Bekijk alle reviews op Google →",
+      cta_h2:"Klaar voor mooie nagels?", cta_p:"Boek eenvoudig online een afspraak bij Manicure V&M — kies zelf je behandeling en tijd.",
+      contact_eyebrow:"Contact &amp; route", contact_h2:"Kom langs in Leiden", contact_p:"Je vindt ons in salon World of Beauty. Boek online of bel ons gerust.",
+      info_address_label:"Adres", info_phone_label:"Telefoon", info_appt_label:"Afspraak", info_appt_val:"Boek direct online",
+      day_mon:"Maandag", day_tue:"Dinsdag", day_wed:"Woensdag", day_thu:"Donderdag", day_fri:"Vrijdag", day_sat:"Zaterdag", day_sun:"Zondag",
+      hours_closed:"Gesloten",
+      footer_tagline:"Nagelstudio in het hart van Leiden — manicure, pedicure, gellak &amp; nagelverlenging.",
+      footer_menu_h5:"Menu", footer_contact_h5:"Contact", footer_made:"Website door",
+      mbar_call:"📞 Bellen",
+      bk_close:"Sluiten", bk_title:"Boek je afspraak", bk_sub:"Kies je behandeling, datum en tijd",
+      bk_demo:"Demo-modus — deze boeking wordt lokaal in je browser bewaard, nog niet in een echte agenda.",
+      bk_step0_h:"Kies je behandeling", bk_step0_hint:"Selecteer de gewenste behandeling.",
+      bk_step1_h:"Kies een datum", bk_step1_hint:"Beschikbare dagen zijn actief.",
+      bk_step2_h:"Kies een tijd", bk_step2_hint:"Beschikbare tijden voor de gekozen dag.",
+      bk_loading:"Beschikbaarheid laden…",
+      bk_step3_h:"Jouw gegevens", bk_step3_hint:"Bijna klaar — vul je gegevens in.",
+      bk_label_name:"Naam", bk_placeholder_name:"Voor- en achternaam", bk_err_name:"Vul je naam in.",
+      bk_label_phone:"Telefoonnummer", bk_placeholder_phone:"06 12 34 56 78", bk_err_phone:"Vul een geldig telefoonnummer in.",
+      bk_label_email:"E-mail", bk_optional:"(optioneel)",
+      bk_label_notes:"Opmerking", bk_placeholder_notes:"Bijv. kleurwens of allergie",
+      bk_back:"‹ Terug", bk_confirm:"Afspraak bevestigen", bk_confirm_busy:"Bezig…",
+      bk_done_h:"Afspraak bevestigd!", bk_done_p:"Tot snel bij Manicure V&M!", bk_ics:"📅 Toevoegen aan agenda",
+      bk_err_taken:"Deze tijd is net geboekt door iemand anders. Kies een andere tijd.",
+      bk_err_generic:"Er ging iets mis. Probeer het opnieuw of bel ons.",
+      bk_empty_day:"Geen beschikbare tijden op deze dag. Kies een andere dag.",
+      bk_empty_load:"Kon beschikbaarheid niet laden. Probeer opnieuw of bel ons.",
+      bk_sum_service:"Behandeling", bk_sum_date:"Datum", bk_sum_time:"Tijd", bk_sum_name:"Naam",
+      ticker_items:["Manicure","Pedicure","Gellak","Nagelverlenging","Nail Art","Acrylnagels","Russische Manicure","Online Boeken"],
+      months:["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],
+      dow_short:["ma","di","wo","do","vr","za","zo"],
+      dow_long:["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],
+      months_short:["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"]
+    },
+    en: {
+      pageTitle: "Manicure V&M — Nail Studio in Leiden",
+      metaDesc: "Manicure V&M — nail studio in the heart of Leiden. Manicure, pedicure, gel polish, nail extensions and nail art with an eye for detail. Book online in seconds.",
+      nav_treatments:"Treatments", nav_gallery:"Gallery", nav_about:"About us", nav_reviews:"Reviews", nav_contact:"Contact", nav_book:"Book online",
+      mnav_close:"Close ✕",
+      hero_eyebrow:"Nail studio · Leiden",
+      hero_h1:"Beautifully cared-for nails,<br>with an eye for <em>detail</em>.",
+      hero_lead:"At Manicure V&M it's all about beautiful, healthy nails in a relaxed setting. Manicure, pedicure, gel polish and nail extensions — done with skill and care.",
+      hero_call:"📞 Call us",
+      hero_rating:"<b>Loved</b> by clients in and around Leiden.",
+      alt_hero:"Manicure at Manicure V&M", alt_about:"Manicure V&M studio",
+      trust1_b:"Craft &amp; detail", trust1_span:"Neatly finished",
+      trust2_b:"Hygienic", trust2_span:"Sterile &amp; well cared for",
+      trust3_b:"Relaxed atmosphere", trust3_span:"Take a moment for yourself",
+      trust4_b:"Book online", trust4_span:"Live availability",
+      svc_h2:"The menu", svc_p:"Choose your treatment — you'll see real-time availability right away.",
+      cat_classic:"Classic", cat_gel:"Gel polish &amp; gel", cat_ext:"Extensions &amp; nail art", cat_russian:"Russian technique", cat_men:"For men",
+      svc_manicure_n:"Manicure", svc_manicure_d:"Neatly filed, polished and cared-for nails.",
+      svc_pedicure_n:"Pedicure", svc_pedicure_d:"Well cared for feet and toenails.",
+      svc_manipedi_n:"Manicure &amp; pedicure", svc_manipedi_d:"Hands and feet in one visit.",
+      svc_polish_n:"Regular polish", svc_polish_d:"Classic polish in your colour of choice.",
+      svc_gellak_n:"Gel polish", svc_gellak_d:"Long-lasting colour with a glossy finish.",
+      svc_gelext_n:"Gel nails &amp; extensions", svc_gelext_d:"Strong and natural-looking.",
+      svc_acryl_n:"Acrylic nails", svc_acryl_d:"Extra-strong, durable extensions.",
+      svc_nailart_n:"Nail art", svc_nailart_d:"From subtle accents to a full set.",
+      svc_rus_n:"Russian manicure", svc_rus_d:"A precise dry technique.",
+      svc_heren_mani_n:"Manicure for men", svc_heren_mani_d:"Well cared for hands and nails.",
+      svc_heren_pedi_n:"Pedicure for men", svc_heren_pedi_d:"Fresh, well cared for feet.",
+      svc_note:'Have a combination or something special in mind? Pick the closest treatment and let us know under "notes".',
+      gal_eyebrow:"Our work", gal_h2:"A glimpse of our nails", gal_p:"Real photos from our salon and clients — filter by style.",
+      filter_all:"All", filter_manicure:"Manicure", filter_gellak:"Gel polish", filter_verlenging:"Extensions", filter_nailart:"Nail art", filter_pedicure:"Pedicure",
+      gal_cap1:"Gel polish – nude almond", gal_cap2:"Nail art – pink chrome", gal_cap3:"Gel polish – black & grey", gal_cap4:"Nail art – silver ombré", gal_cap5:"Nail art – blue glitter", gal_cap6:"Nail art – glitter & gems",
+      gal_note:"Real photos from our clients and salon, shared via our Google page.",
+      about_eyebrow:"About us",
+      about_p1:"Manicure V&M is a nail studio in the heart of Leiden, based inside salon World of Beauty. Viktoria and Marina take care of beautiful, healthy nails with real craftsmanship and attention.",
+      about_p2:"Quality, hygiene and a warm welcome always come first — whether you're here for a quick gel polish or a full set of extensions.",
+      about_li1:"Experienced specialists Viktoria &amp; Marina", about_li2:"Manicure, pedicure, gel polish &amp; extensions", about_li3:"Easy online booking, whenever suits you",
+      about_cta:"Book your appointment",
+      rev_eyebrow:"What clients say", rev_h2:"Happy hands &amp; feet",
+      rev1:'"It\'s always a treat to go to Maryna. Not only does she make my nails look beautiful, but she also has a wonderful personality and makes her clients feel comfortable and happy."',
+      rev1_who:"— Sarah de Rijcke",
+      rev2:'"My feet and nails look gorgeous and well cared for again!! Maryna works very carefully and is super sweet! Such a lovely treat."',
+      rev2_who:"— Pascale Steegh (translated)",
+      rev3:'"Without a doubt 5 stars. 10 stars are unfortunately not possible, but would have been well deserved. Perfect manicure and gel polish in a lovely, clean salon by real professionals. Highly recommend!"',
+      rev3_who:"— E. H.",
+      rev4:'"Best manicure I\'ve ever had in my life! Lovely professional ladies and a cozy, relaxing atmosphere. Perfect for anyone who wants to combine relaxation with a beauty treatment. Highly recommend."',
+      rev4_who:"— Troy van Beek",
+      rev5:'"Beautiful designs, relaxing atmosphere and beyond lovely staff. Could not recommend enough!"',
+      rev5_who:"— Karolina Dąbrowska",
+      rev_prev:"Previous", rev_next:"Next",
+      rev_note:"✻ Real customer reviews, sourced from Google.",
+      rev_see_all:"See all reviews on Google →",
+      cta_h2:"Ready for beautiful nails?", cta_p:"Book an appointment with Manicure V&M online in seconds — pick your own treatment and time.",
+      contact_eyebrow:"Contact &amp; directions", contact_h2:"Visit us in Leiden", contact_p:"You'll find us inside salon World of Beauty. Book online or just give us a call.",
+      info_address_label:"Address", info_phone_label:"Phone", info_appt_label:"Appointment", info_appt_val:"Book directly online",
+      day_mon:"Monday", day_tue:"Tuesday", day_wed:"Wednesday", day_thu:"Thursday", day_fri:"Friday", day_sat:"Saturday", day_sun:"Sunday",
+      hours_closed:"Closed",
+      footer_tagline:"Nail studio in the heart of Leiden — manicure, pedicure, gel polish &amp; extensions.",
+      footer_menu_h5:"Menu", footer_contact_h5:"Contact", footer_made:"Website by",
+      mbar_call:"📞 Call",
+      bk_close:"Close", bk_title:"Book your appointment", bk_sub:"Choose your treatment, date and time",
+      bk_demo:"Demo mode — this booking is saved locally in your browser, not yet in a real calendar.",
+      bk_step0_h:"Choose your treatment", bk_step0_hint:"Select the treatment you'd like.",
+      bk_step1_h:"Choose a date", bk_step1_hint:"Available days are active.",
+      bk_step2_h:"Choose a time", bk_step2_hint:"Available times for the selected day.",
+      bk_loading:"Loading availability…",
+      bk_step3_h:"Your details", bk_step3_hint:"Almost done — fill in your details.",
+      bk_label_name:"Name", bk_placeholder_name:"First and last name", bk_err_name:"Please enter your name.",
+      bk_label_phone:"Phone number", bk_placeholder_phone:"06 12 34 56 78", bk_err_phone:"Please enter a valid phone number.",
+      bk_label_email:"Email", bk_optional:"(optional)",
+      bk_label_notes:"Notes", bk_placeholder_notes:"E.g. colour preference or allergy",
+      bk_back:"‹ Back", bk_confirm:"Confirm appointment", bk_confirm_busy:"Please wait…",
+      bk_done_h:"Appointment confirmed!", bk_done_p:"See you soon at Manicure V&M!", bk_ics:"📅 Add to calendar",
+      bk_err_taken:"This time slot was just booked by someone else. Please choose another time.",
+      bk_err_generic:"Something went wrong. Please try again or call us.",
+      bk_empty_day:"No available times on this day. Please choose another day.",
+      bk_empty_load:"Couldn't load availability. Please try again or call us.",
+      bk_sum_service:"Treatment", bk_sum_date:"Date", bk_sum_time:"Time", bk_sum_name:"Name",
+      ticker_items:["Manicure","Pedicure","Gel Polish","Nail Extensions","Nail Art","Acrylic Nails","Russian Manicure","Book Online"],
+      months:["January","February","March","April","May","June","July","August","September","October","November","December"],
+      dow_short:["Mo","Tu","We","Th","Fr","Sa","Su"],
+      dow_long:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      months_short:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    }
+  };
+
+  var LANG = localStorage.getItem("vm_lang") || "nl";
+
+  function t(key){ return (TRANSLATIONS[LANG] && TRANSLATIONS[LANG][key]) || (TRANSLATIONS.nl[key]) || ""; }
+
+  function renderMarquee(){
+    var track = document.getElementById('marqueeTrack');
+    if(!track) return;
+    var items = t('ticker_items') || [];
+    var groupHtml = items.map(function(item){ return '<span class="marquee-item">'+item+'</span>'; }).join('');
+    track.innerHTML = '<div class="marquee-group">'+groupHtml+'</div><div class="marquee-group">'+groupHtml+'</div>';
+  }
+
+  function applyLang(lang){
+    LANG = lang;
+    localStorage.setItem("vm_lang", lang);
+    document.documentElement.lang = lang;
+    document.getElementById('pageTitle').textContent = t('pageTitle');
+    document.getElementById('metaDesc').setAttribute('content', t('metaDesc'));
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      var val = t(key);
+      if(val) el.innerHTML = val;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var val = t(el.getAttribute('data-i18n-placeholder'));
+      if(val) el.setAttribute('placeholder', val);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var val = t(el.getAttribute('data-i18n-aria'));
+      if(val) el.setAttribute('aria-label', val);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+      var val = t(el.getAttribute('data-i18n-alt'));
+      if(val) el.setAttribute('alt', val);
+    });
+    document.querySelectorAll('.langtoggle button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang')===lang);
+    });
+    renderMarquee();
+
+    // Keep the booking modal's live-rendered content in sync if it's open
+    if(document.getElementById('bkOverlay').classList.contains('open')){
+      renderServices();
+      renderCalendar();
+      if(bkCur===2 && state.dateISO) renderSlots();
+      if(bkCur===3) buildSummary();
+    }
+  }
+
+  document.querySelectorAll('.langtoggle').forEach(function(group){
+    group.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){ applyLang(btn.getAttribute('data-lang')); });
+    });
+  });
+
+  var hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var burger=document.getElementById('burger'),mnav=document.getElementById('mnav'),mclose=document.getElementById('mclose');
+  burger.addEventListener('click',function(){mnav.classList.add('open');burger.classList.add('open');});
+  mclose.addEventListener('click',function(){mnav.classList.remove('open');burger.classList.remove('open');});
+  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.classList.remove('open');});});
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // ripple / press feedback on every interactive control (delegated, works on dynamically rendered elements too)
+  var RIPPLE_SELECTOR = '.btn,.filter,.menu-item,.bksvc,.bkslot,.bkcal-day.avail,.rev-arrow,.langtoggle button,.burger,.bkclose,.bkcal-head button:not(:disabled)';
+  document.addEventListener('click', function(e){
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var el = e.target.closest(RIPPLE_SELECTOR);
+    if(!el || el.classList.contains('taken') || el.classList.contains('disabled')) return;
+    var rect = el.getBoundingClientRect();
+    var size = Math.max(rect.width, rect.height) * 1.3;
+    var span = document.createElement('span');
+    span.className = 'ripple';
+    span.style.width = span.style.height = size + 'px';
+    span.style.left = (e.clientX - rect.left - size/2) + 'px';
+    span.style.top = (e.clientY - rect.top - size/2) + 'px';
+    el.appendChild(span);
+    span.addEventListener('animationend', function(){ span.remove(); });
+  });
+
+  // scrollspy: highlight the active nav link as the visitor scrolls
+  var spySections = ['behandelingen','galerij','over','reviews','contact']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+  var spyLinks = document.querySelectorAll('.navlinks a, .mnav a:not(.btn)');
+  if(spySections.length){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = entry.target.getAttribute('id');
+          spyLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')==='#'+id); });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    spySections.forEach(function(s){ spy.observe(s); });
+  }
+
+  // gallery filter
+  var filters=document.querySelectorAll('#filters .filter'),tiles=document.querySelectorAll('#gal .gtile');
+  filters.forEach(function(f){f.addEventListener('click',function(){
+    filters.forEach(function(x){x.classList.remove('active');});f.classList.add('active');
+    var cat=f.getAttribute('data-f');
+    tiles.forEach(function(t){t.classList.toggle('hide',!(cat==='all'||t.getAttribute('data-cat')===cat));});
+  });});
+
+  // reviews carousel
+  var slides=document.getElementById('revSlides');
+  if(slides){var total=slides.children.length,idx=0;
+    function go(n){idx=(n+total)%total;slides.style.transform='translateX(-'+(idx*100)+'%)';}
+    document.getElementById('revNext').addEventListener('click',function(){go(idx+1);reset();});
+    document.getElementById('revPrev').addEventListener('click',function(){go(idx-1);reset();});
+    var auto=setInterval(function(){go(idx+1);},6000);
+    function reset(){clearInterval(auto);auto=setInterval(function(){go(idx+1);},6000);}
+  }
+
+  /* ================= BOOKING BACKEND (demo <-> live abstraction) ================= */
+  function isoDate(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  function toMin(t){var p=t.split(":");return (+p[0])*60+(+p[1]);}
+  function toTimeLabel(mins){var h=Math.floor(mins/60),m=mins%60;return String(h).padStart(2,"0")+":"+String(m).padStart(2,"0");}
+  function overlaps(startA,durA,startB,durB){var endA=startA+durA,endB=startB+durB;return startA<endB && startB<endA;}
+
+  function demoSeed(){
+    if(localStorage.getItem("vm_demo_seeded")) return;
+    var d1=new Date(); d1.setDate(d1.getDate()+1);
+    var d2=new Date(); d2.setDate(d2.getDate()+2);
+    var seed=[{appt_date:isoDate(d1),appt_time:"11:00",duration_min:45},
+              {appt_date:isoDate(d2),appt_time:"14:00",duration_min:90}];
+    localStorage.setItem("vm_demo_bookings", JSON.stringify(seed));
+    localStorage.setItem("vm_demo_seeded","1");
+  }
+  function demoFetchBookedSlots(dateISO){
+    demoSeed();
+    var all=JSON.parse(localStorage.getItem("vm_demo_bookings")||"[]");
+    return Promise.resolve(all.filter(function(a){return a.appt_date===dateISO;}));
+  }
+  function demoCreateAppointment(appt){
+    var all=JSON.parse(localStorage.getItem("vm_demo_bookings")||"[]");
+    var clash=all.some(function(a){return a.appt_date===appt.appt_date && a.appt_time===appt.appt_time;});
+    if(clash) return Promise.resolve({ok:false, reason:"taken"});
+    all.push({appt_date:appt.appt_date, appt_time:appt.appt_time, duration_min:appt.duration_min});
+    localStorage.setItem("vm_demo_bookings", JSON.stringify(all));
+    return Promise.resolve({ok:true});
+  }
+  async function fetchBookedSlots(dateISO){
+    if(!LIVE) return demoFetchBookedSlots(dateISO);
+    var res=await fetch(CALENDAR_API_URL+"/availability?date="+dateISO);
+    if(!res.ok) throw new Error("availability failed");
+    return await res.json(); // [{appt_time:"11:00", duration_min:45}, ...]
+  }
+  async function createAppointment(appt){
+    if(!LIVE) return demoCreateAppointment(appt);
+    var res=await fetch(CALENDAR_API_URL+"/book", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(appt)});
+    if(res.status===409) return {ok:false, reason:"taken"};
+    if(!res.ok) return {ok:false, reason:"error"};
+    return {ok:true};
+  }
+
+  function generateSlots(dateISO, durMin){
+    var d=new Date(dateISO+"T00:00:00"), dow=d.getDay(), hrs=HOURS[dow];
+    if(!hrs) return [];
+    var openMin=toMin(hrs[0]), closeMin=toMin(hrs[1]), slots=[];
+    var now=new Date(), isToday=isoDate(now)===dateISO, nowMin=now.getHours()*60+now.getMinutes()+60;
+    for(var t=openMin; t+durMin<=closeMin; t+=30){
+      if(isToday && t<nowMin) continue;
+      slots.push(t);
+    }
+    return slots;
+  }
+
+  /* ================= WIZARD STATE ================= */
+  var state={service:null, dateISO:null, time:null, name:'', phone:'', email:'', notes:''};
+  var bkCur=0, bkMax=4;
+  var calState={view:new Date(new Date().getFullYear(), new Date().getMonth(), 1)};
+
+  function renderServices(){
+    var wrap=document.getElementById('bkServices');
+    var selectedId = state.service ? state.service.id : null;
+    wrap.innerHTML=SERVICES.map(function(s){
+      return '<div class="bksvc'+(selectedId===s.id?' sel':'')+'" data-id="'+s.id+'"><span>'+s.icon+' '+s.name[LANG]+'</span><small>±'+s.dur+' min</small></div>';
+    }).join('');
+    wrap.querySelectorAll('.bksvc').forEach(function(el){
+      el.addEventListener('click', function(){
+        wrap.querySelectorAll('.bksvc').forEach(function(x){x.classList.remove('sel');});
+        el.classList.add('sel');
+        state.service=SERVICES.find(function(s){return s.id===el.getAttribute('data-id');});
+        setTimeout(function(){ goStep(1); }, 180);
+      });
+    });
+  }
+
+  function renderCalendar(){
+    var wrap=document.getElementById('bkCal'), view=calState.view;
+    var monthNames=t('months');
+    var first=new Date(view.getFullYear(), view.getMonth(), 1);
+    var startDow=first.getDay();
+    var daysInMonth=new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+    var todayISO=isoDate(new Date());
+    var now=new Date(), minMonth=new Date(now.getFullYear(), now.getMonth(),1), maxMonth=new Date(now.getFullYear(), now.getMonth()+2,1);
+    var atMin=(view.getFullYear()===minMonth.getFullYear() && view.getMonth()===minMonth.getMonth());
+    var atMax=(view.getFullYear()===maxMonth.getFullYear() && view.getMonth()===maxMonth.getMonth());
+
+    var html='<div class="bkcal-head"><button id="bkPrevMonth"'+(atMin?' disabled':'')+'>‹</button><span>'+monthNames[view.getMonth()]+' '+view.getFullYear()+'</span><button id="bkNextMonth"'+(atMax?' disabled':'')+'>›</button></div>';
+    html+='<div class="bkcal-grid">';
+    t('dow_short').forEach(function(d){html+='<div class="dow">'+d+'</div>';});
+    var offset=(startDow+6)%7;
+    for(var i=0;i<offset;i++) html+='<div class="bkcal-day empty"></div>';
+    for(var day=1; day<=daysInMonth; day++){
+      var d=new Date(view.getFullYear(), view.getMonth(), day), iso=isoDate(d), dow=d.getDay();
+      var disabled = iso<todayISO || !HOURS[dow];
+      html+='<div class="bkcal-day '+(disabled?'disabled':'avail')+(state.dateISO===iso?' sel':'')+'" data-date="'+iso+'">'+day+'</div>';
+    }
+    html+='</div>';
+    wrap.innerHTML=html;
+
+    var prevBtn=document.getElementById('bkPrevMonth'), nextBtn=document.getElementById('bkNextMonth');
+    prevBtn.addEventListener('click', function(){ var p=new Date(view.getFullYear(), view.getMonth()-1,1); if(p>=minMonth){calState.view=p; renderCalendar();} });
+    nextBtn.addEventListener('click', function(){ var n=new Date(view.getFullYear(), view.getMonth()+1,1); if(n<=maxMonth){calState.view=n; renderCalendar();} });
+    wrap.querySelectorAll('.bkcal-day.avail').forEach(function(el){
+      el.addEventListener('click', function(){
+        state.dateISO=el.getAttribute('data-date');
+        renderCalendar();
+        goStep(2);
+        renderSlots();
+      });
+    });
+  }
+
+  async function renderSlots(){
+    var wrap=document.getElementById('bkSlotsWrap');
+    wrap.innerHTML='<div class="bkloading">'+t('bk_loading')+'</div>';
+    try{
+      var booked=await fetchBookedSlots(state.dateISO);
+      var candidates=generateSlots(state.dateISO, state.service.dur);
+      if(!candidates.length){ wrap.innerHTML='<div class="bkempty">'+t('bk_empty_day')+'</div>'; return; }
+      var html='<div class="bkslots">';
+      candidates.forEach(function(startMin){
+        var taken=booked.some(function(b){ return overlaps(startMin, state.service.dur, toMin(String(b.appt_time).slice(0,5)), b.duration_min); });
+        var label=toTimeLabel(startMin);
+        html+='<div class="bkslot'+(taken?' taken':'')+'" data-t="'+label+'">'+label+'</div>';
+      });
+      html+='</div>';
+      wrap.innerHTML=html;
+      wrap.querySelectorAll('.bkslot:not(.taken)').forEach(function(el){
+        el.addEventListener('click', function(){
+          wrap.querySelectorAll('.bkslot').forEach(function(x){x.classList.remove('sel');});
+          el.classList.add('sel');
+          state.time=el.getAttribute('data-t');
+          setTimeout(function(){ goStep(3); }, 180);
+        });
+      });
+    }catch(e){
+      wrap.innerHTML='<div class="bkempty">'+t('bk_empty_load')+'</div>';
+    }
+  }
+
+  function formatDate(iso){
+    var d=new Date(iso+"T00:00:00");
+    var days=t('dow_long');
+    var months=t('months_short');
+    return days[d.getDay()]+" "+d.getDate()+" "+months[d.getMonth()]+" "+d.getFullYear();
+  }
+  function buildSummary(){
+    document.getElementById('bkSummary').innerHTML=
+      '<div class="row"><span>'+t('bk_sum_service')+'</span><b>'+state.service.name[LANG]+'</b></div>'+
+      '<div class="row"><span>'+t('bk_sum_date')+'</span><b>'+formatDate(state.dateISO)+'</b></div>'+
+      '<div class="row"><span>'+t('bk_sum_time')+'</span><b>'+state.time+'</b></div>';
+  }
+  function buildDoneSummary(){
+    document.getElementById('bkDoneSummary').innerHTML=
+      '<div class="row"><span>'+t('bk_sum_service')+'</span><b>'+state.service.name[LANG]+'</b></div>'+
+      '<div class="row"><span>'+t('bk_sum_date')+'</span><b>'+formatDate(state.dateISO)+'</b></div>'+
+      '<div class="row"><span>'+t('bk_sum_time')+'</span><b>'+state.time+'</b></div>'+
+      '<div class="row"><span>'+t('bk_sum_name')+'</span><b>'+state.name+'</b></div>';
+  }
+  function buildIcsLink(){
+    var startMin=toMin(state.time), d=new Date(state.dateISO+"T00:00:00");
+    d.setMinutes(d.getMinutes()+startMin);
+    var endD=new Date(d); endD.setMinutes(endD.getMinutes()+state.service.dur);
+    function pad(n){return String(n).padStart(2,"0");}
+    function fmt(dt){return dt.getFullYear()+pad(dt.getMonth()+1)+pad(dt.getDate())+"T"+pad(dt.getHours())+pad(dt.getMinutes())+"00";}
+    var ics="BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:"+state.service.name[LANG]+" — Manicure V&M\nDTSTART:"+fmt(d)+"\nDTEND:"+fmt(endD)+"\nLOCATION:Volmolengracht 46, 2312 PH Leiden\nDESCRIPTION:Manicure V&M\nEND:VEVENT\nEND:VCALENDAR";
+    var blob=new Blob([ics], {type:"text/calendar"});
+    document.getElementById('bkIcsLink').href=URL.createObjectURL(blob);
+  }
+
+  function goStep(n){
+    bkCur=Math.max(0, Math.min(bkMax, n));
+    document.querySelectorAll('.bkstep').forEach(function(s,i){ s.classList.toggle('active', i===bkCur); });
+    document.querySelectorAll('#bkProgress .seg').forEach(function(seg,i){ seg.querySelector('.fill').style.width = i<=bkCur ? '100%':'0'; });
+    document.getElementById('bkBack').classList.toggle('hide', bkCur===0 || bkCur===4);
+    var nextBtn=document.getElementById('bkNext');
+    nextBtn.style.display = (bkCur===3) ? 'inline-flex' : 'none';
+    if(bkCur===3) buildSummary();
+  }
+
+  document.getElementById('bkBack').addEventListener('click', function(){
+    if(bkCur===1) goStep(0);
+    else if(bkCur===2) goStep(1);
+    else if(bkCur===3){ goStep(2); renderSlots(); }
+    else goStep(bkCur-1);
+  });
+
+  document.getElementById('bkNext').addEventListener('click', async function(){
+    var errEl=document.getElementById('bkErr'); errEl.classList.remove('show'); errEl.textContent='';
+    var name=document.getElementById('bkName').value.trim();
+    var phone=document.getElementById('bkPhone').value.trim();
+    var email=document.getElementById('bkEmail').value.trim();
+    var notes=document.getElementById('bkNotes').value.trim();
+    var fN=document.getElementById('bkFName'), fP=document.getElementById('bkFPhone');
+    var ok=true;
+    if(!name){fN.classList.add('err'); ok=false;} else fN.classList.remove('err');
+    var digits=phone.replace(/\D/g,'');
+    if(digits.length<9){fP.classList.add('err'); ok=false;} else fP.classList.remove('err');
+    if(!ok) return;
+    state.name=name; state.phone=phone; state.email=email; state.notes=notes;
+
+    var btn=this; btn.disabled=true; var origLabel=t('bk_confirm'); btn.textContent=t('bk_confirm_busy');
+    var appt={service:state.service.name[LANG], duration_min:state.service.dur, appt_date:state.dateISO, appt_time:state.time,
+               customer_name:state.name, phone:state.phone, email:state.email||null, notes:state.notes||null, status:'confirmed'};
+    var res=await createAppointment(appt);
+    btn.disabled=false; btn.textContent=origLabel;
+    if(!res.ok){
+      if(res.reason==='taken'){ errEl.textContent=t('bk_err_taken'); errEl.classList.add('show'); goStep(2); renderSlots(); }
+      else { errEl.textContent=t('bk_err_generic'); errEl.classList.add('show'); }
+      return;
+    }
+    buildDoneSummary(); buildIcsLink(); goStep(4);
+  });
+
+  function openBooking(){
+    state={service:null, dateISO:null, time:null, name:'', phone:'', email:'', notes:''};
+    document.getElementById('bkDemoNote').style.display = LIVE ? 'none' : 'block';
+    renderServices();
+    calState.view=new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+    renderCalendar();
+    goStep(0);
+    document.getElementById('bkOverlay').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeBooking(){
+    document.getElementById('bkOverlay').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.querySelectorAll('.js-book').forEach(function(el){
+    el.addEventListener('click', function(e){ e.preventDefault(); openBooking(); });
+  });
+  document.getElementById('bkClose').addEventListener('click', closeBooking);
+  document.getElementById('bkOverlay').addEventListener('click', function(e){ if(e.target===this) closeBooking(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBooking(); });
+
+  applyLang(LANG);
+
+})();
+</script>
+</body>
+</html>
